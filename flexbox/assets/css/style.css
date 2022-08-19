@@ -1,0 +1,54 @@
+body {
+    background-color: ivory;
+}
+.descripcion {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-container {
+    border: 1px solid darkgray;
+    background-color: lightgrey;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    height: 30vh;
+}
+
+.item {
+    border: 1px solid;
+    background-color: white;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    margin: 5px;
+}
+.property {
+    width: 20%;
+}
+.item-1 {
+    background-color: lightcoral;
+}
+.item-2 {
+    background-color: lightcyan;
+}
+.item-3 {
+    background-color: lightpink;
+}
+.item-4 {
+    background-color: lightgreen;
+}
+.justifyProperty {
+    background-color: azure;
+}
+.directionProperty {
+    background-color:aquamarine
+}
+.sizeProperty {
+    background-color:pink
+}
+.alignProperty {
+    background-color:lightyellow;
+}

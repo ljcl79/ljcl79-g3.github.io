@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>
+        Propiedades de FlexBox
+    </h1>
+    <div class="descripcion">
+        <div class="justifyProperty property">
+            <h3>Justify Content</h3>
+            <p>
+                Nos permite definir la alineación de los elementos en su eje principal.
+            </p>
+            <select id="justifyContent">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+                <option value="space-between">space-between</option>
+            </select>
+        </div>
+        <div class="directionProperty property">
+            <h3>Flex Direction</h3>
+            <p>
+                Nos permite definir la dirección de los elementos
+            </p>
+            <select id="flexDirection">
+                <option value="row">row</option>
+                <option value="row-reverse">row-reverse</option>
+                <option value="column">column</option>
+                <option value="column-reverse">column-reverse</option>
+            </select>
+        </div>
+
+        <div class="sizeProperty property">
+            <h3>Flex Grow</h3>
+            <p>
+                Nos permite definir las proporciones de los elementos
+            </p>
+            <select id="flexGrow">
+                <option value="0000">Tamaño original</option>
+                <option value="1111">Todos iguales</option>
+                <option value="1234">1 2 3 4</option>
+                <option value="1212">1 2 1 2</option>
+                <option value="1221">1 2 2 1</option>
+                <option value="1321">1 3 2 1</option>
+            </select>
+        </div>
+
+        <div class="alignProperty property">
+            <h3>Align Items</h3>
+            <p>
+                Nos permite la alineación del elementos en el eje secundario. 
+                Si trabajamos con flex-direction:row. Align items trabaja en la columna. 
+                Si trabajamos con flex-direction:column. Align items trabaja en la fila.
+            </p>
+            <select id="alignItems">
+                <option value="flex-start">flex-start</option>
+                <option value="flex-end">flex-end</option>
+                <option value="center">center</option>
+                <option value="space-around">space-around</option>
+                <option value="space-evenly">space-evenly</option>
+                <option value="space-between">space-between</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="flex-container">
+        <div class="item item-1">
+
+            Item 1
+
+        </div>
+        <div class="item item-2">
+
+            Item 2
+
+        </div>
+
+        <div class="item item-3">
+
+            Item 3
+
+        </div>
+        <div class="item item-4">
+
+            Item 4
+
+        </div>
+    </div>
+</body>
+<script>
+    const justifyContent = document.querySelector('#justifyContent');
+    justifyContent.addEventListener('change', (e) => {
+        console.log(justifyContent.value);
+        document.querySelector('.flex-container').style.justifyContent = e.target.value;
+    });
+
+    const flexDirection = document.querySelector('#flexDirection');
+    flexDirection.addEventListener('change', (e) => {
+        console.log(flexDirection.value);
+        document.querySelector('.flex-container').style.flexDirection = e.target.value;
+        if (flexDirection.value.includes('column')) {
+            document.querySelector('.flex-container').style.height = '100vh';
+        } else {
+            document.querySelector('.flex-container').style.height = '';
+        }
+    });
+
+    const flexGrow = document.querySelector('#flexGrow');
+    flexGrow.addEventListener('change', (e) => {
+        console.log(flexGrow.value);
+        document.querySelector('.item-1').style.flexGrow = flexGrow.value[0];
+        document.querySelector('.item-2').style.flexGrow = flexGrow.value[1];
+        document.querySelector('.item-3').style.flexGrow = flexGrow.value[2];
+        document.querySelector('.item-4').style.flexGrow = flexGrow.value[3];
+
+        if (flexGrow.value == '0000') {
+            document.querySelector('.item').style.flexBasis = '120px';
+        } else {
+            document.querySelector('.item').style.flexBasis = '0';
+        }
+    });
+
+    const alignItems = document.querySelector('#alignItems');
+    alignItems.addEventListener('change', (e) => {
+        console.log(alignItems.value);
+        document.querySelector('.flex-container').style.alignItems = e.target.value;
+    });
+
+</script>
+
+</html>
