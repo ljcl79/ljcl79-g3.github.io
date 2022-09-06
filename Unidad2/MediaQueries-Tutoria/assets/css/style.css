@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 15% auto;
+    grid-template-rows: auto auto auto;
+    
+    
+    grid-template-areas: 
+    'nav nav'
+    'aside main'
+    'footer footer';
+}
+
+nav {
+    background-color: navy;
+    color: white;
+    grid-area: nav;    
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    background-color: #e0e0e0;
+    grid-area: aside;
+    padding: 15px;
+}
+
+main {
+    background-color: #efefef;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height:80vh;
+    padding: 15px;
+}
+
+.productos {
+    background-color: #efefef;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-items: center;
+    column-gap: 15px;
+    row-gap: 15px;
+    overflow-y: auto;
+    height:80vh;
+    padding: 15px;
+}
+
+.busqueda {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+footer {
+    background-color: white;
+    grid-area: footer;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 50vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-comprar {
+    background-color: navy;
+    color: white;
+    width:100%;
+    border: 1px solid navy;
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+.lista {
+    list-style: none;
+    color: #707070;
+}
+.cantidad {
+    color: #aeaeae;
+}
+
+.menu-burguer {
+    display: none;
+}
+
+article img {
+    max-height: 30vh;
+    max-width: 10vw;
+    object-fit: contain;
+}
+
+.paginacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.paginacion__item {
+    border: 1px solid lightgray;
+    color: navy;
+    background-color: transparent;
+    padding: 10px;
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        
+        grid-template-areas: 
+        'nav'
+        'main'
+        'footer';
+    }
+
+    main {
+        background-color: #efefef;
+        grid-area: main;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow-y: auto;
+        height:80vh;
+        padding: 15px;
+    }
+
+    .productos {
+        background-color: #efefef;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        column-gap: 15px;
+        row-gap: 15px;
+        overflow-y: auto;
+        height:80vh;
+        padding: 15px;
+        width: 100%;
+    }
+
+    aside {
+        display:none;
+    }
+
+    nav {
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    .menu-burguer {
+        display: block;
+    }
+
+    article img {
+        max-height: 50vh;
+        max-width: 30vw;
+        object-fit: contain;
+    }
+
+    .busqueda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .topnav__menu {
+        display: none;
+      }
+      #topnav__burger:checked + .topnav__menu {
+        display:flex;
+        flex-direction: column;
+      }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 992px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 25% auto;
+        grid-template-rows: auto auto auto;
+        
+        grid-template-areas: 
+        'nav nav'
+        'aside main'
+        'footer footer';
+    }
+    
+    main {
+        background-color: #efefef;
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        height:80vh;
+        padding: 15px;
+    }
+
+    .productos {
+        background-color: #efefef;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        column-gap: 15px;
+        row-gap: 15px;
+        overflow-y: auto;
+        height:80vh;
+        padding: 15px;
+    }
+    
+    article img {
+        height: 40vh;
+        width: 15vw;
+        object-fit: contain;
+    }
+
+    .busqueda {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+}
+
+/* Resto de pantallas */
+@media (min-width: 993px) {
+}

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+.principal {
+    display: flex;
+    height: 100vh;
+}
+
+main {
+    flex: 0 0 25%;
+}
+
+header {
+   
+}
+
+menu {
+    border-right: 1px solid #E8ebE4;
+    overflow-y: auto;
+    height: 65vh;
+}
+
+article {
+    display: flex;
+    flex-basis: 75%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+article img {
+    width: 30%;
+}
+
+h1 {
+    font-family: 'Roboto';
+    font-size: 3em;
+}
+
+.subtitle {
+    font-family: 'Open Sans';
+    max-width: 50%;
+    text-align: center;
+}
+
+.contacto {
+    display: flex;
+    padding: 1em;
+    border-bottom: 1px solid #E8ebE4;
+}
+
+.thumbail {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+
+.datosContacto {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    justify-content: center;
+}
+
+.nombreUsuario {
+    padding-left: 1em;
+}
+.user {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em 1.5em;
+    align-items: center;
+    border-bottom: 1px solid #E8ebE4;
+    height: 10vh;
+}
+.datosUser {
+    display: flex;
+}
+.thumbailUser {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+.status {
+    color:  #bec1bb;
+    font-size: 0.8em;
+}
+
+.menuBoton {
+    color: #bec1bb;
+    padding-left: 0.5em;
+}
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5em;
+    border-bottom: 1px solid #E8ebE4;
+    
+}
+
+button {
+    background-color: #a491d2;
+    color: #fff;
+    font-size: 1em;
+    padding: 1em;
+    border: 0;
+    flex-basis: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #cdc3e6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a491d2;
+}
